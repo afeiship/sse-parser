@@ -1,0 +1,29 @@
+{
+  "name": "webkit-sassui-flex-lmr-mauto",
+  "description": "Flex layout left/middle/right",
+  "main": [
+    "dist/webkit-sassui-flex-lmr-mauto.css",
+    "dist/webkit-sassui-flex-lmr-mauto.scss"
+  ],
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webkit",
+    "cssui",
+    "flex-lmr-mauto"
+  ],
+  "homepage": "https://github.com/afeiship/webkit-cssui-absolute-center",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
