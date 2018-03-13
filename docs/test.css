@@ -16,8 +16,12 @@
   align-items: center;
 }
 
-.webkit-sassui-flex-lmr-mauto[data-align=right] {
-  align-items: right;
+.webkit-sassui-flex-lmr-mauto[data-align=flex-end] {
+  align-items: flex-end;
+}
+
+.webkit-sassui-flex-lmr-mauto[data-align=normal] {
+  align-items: normal;
 }
 
 /*webkit-sassui-flex-lmr-mauto End*/

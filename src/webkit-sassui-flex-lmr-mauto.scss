@@ -1,13 +1,15 @@
 /*webkit-sassui-flex-lmr-mauto Start*/
-$webkit-sassui-flex-lmr-mauto-align-map:(flex-start,center,right);
+$webkit-sassui-flex-lmr-mauto-align-map:(flex-start,center,flex-end, normal);
 .webkit-sassui-flex-lmr-mauto{
   display: flex;
   align-items: center;
+
   >.left{}
+  >.right{}
   >.middle{
     flex: 1;
   }
-  >.left{}
+
   @each $value in $webkit-sassui-flex-lmr-mauto-align-map{
     &[data-align=#{$value}]{
       align-items: #{$value};
