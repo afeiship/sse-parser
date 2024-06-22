@@ -1,6 +1,6 @@
 {
   "name": "@jswork/sse-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Event source message parser.",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
