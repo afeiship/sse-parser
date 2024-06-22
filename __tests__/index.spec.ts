@@ -8,7 +8,7 @@ const msg2 = fs.readFileSync('__tests__/data/msg2.txt', 'utf8');
 // json style stream
 const msg3 = fs.readFileSync('__tests__/data/msg3.txt', 'utf8');
 
-describe('api.basic', () => {
+describe('SseParser unit tests', () => {
   test('Type: standard event stream', () => {
     const res1 = SseParser.parse(msg1);
     expect(Array.isArray(res1)).toBe(true);
