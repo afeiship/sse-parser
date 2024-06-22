@@ -13,9 +13,10 @@ npm install @jswork/sse-parser
 
 ## usage
 ```js
-import sseParser from '@jswork/sse-parser';
+import SseParser from '@jswork/sse-parser';
 
-// usage goes here.
+SseParser.parse('event: message\ndata: hello\n\n');
+// [{ event:'message', data: 'hello' }]
 ```
 
 ## types
