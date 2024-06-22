@@ -1,23 +1,38 @@
 {
-  "name": "webkit-sassui-flex-lmr-mauto",
-  "version": "0.0.0",
-  "description": "Flex layout left/middle/right",
-  "homepage": "https://github.com/afeiship/webkit-sassui-flex-lmr-mauto",
-  "author": {
-    "name": "afei",
-    "email": "1290657123@qq.com"
-  },
+  "name": "@jswork/sse-parser",
+  "version": "1.0.0",
+  "description": "Event source message parser.",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "global.d.ts"
+  ],
   "scripts": {
-    "build":"gulp"
+    "build": "tsup",
+    "postbuild": "rollup -c rollup.config.mjs",
+    "test": "bun test",
+    "release": "release-it"
   },
-  "main":"dist/webkit-sassui-flex-lmr-mauto.scss",
   "license": "MIT",
   "devDependencies": {
-    "del": "^2.2.1",
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "yargs": "^4.7.1"
-  }
+    "@jswork/next": "^1.2.2",
+    "@swc/core": "^1.3.101",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^18.15.5",
+    "@jswork/rollup-banner": "^1.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.9.6",
+    "tslib": "^2.6.2",
+    "tsup": "^8.0.1",
+    "typescript": "^4.9.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {}
 }
