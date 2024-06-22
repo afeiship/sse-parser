@@ -33,8 +33,14 @@ describe('api.basic', () => {
 
   test('parse one', () => {
     const msg1 = `data:{"type": "processing", "status": "understanding", "chat_id": null}`;
+    const msg2 = `{"type": "processing", "status": "understanding", "chat_id": null}`
+    const msg3 = `id:n0sa4ikz_1\nevent:start\ndata:0%`
     const res1 = SseParser.parseOne(msg1, { type: 'apply7' });
+    const res2 = SseParser.parseOne(msg2, { type: 'json' });
+    const res3 = SseParser.parseOne(msg3, { type:'standard' });
     expect(res1).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
+    expect(res2).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
+    expect(res3).toEqual({ id: 'n0sa4ikz_1', event: 'start', data: '0%' });
   });
 
   test('custom parser', () => {
