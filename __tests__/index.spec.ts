@@ -31,17 +31,19 @@ describe('api.basic', () => {
     expect(res2[0]).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
   });
 
-  test.only('parse one', () => {
+  test('parse one', () => {
     const msg1 = `data:{"type": "processing", "status": "understanding", "chat_id": null}`;
     const res1 = SseParser.parseOne(msg1, { type: 'apply7' });
     expect(res1).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
   });
 
   test('custom parser', () => {
-    const msg_custom = `abcx: {"type": "processing", "status": "understanding", "chat_id": null}`;
-    const res_custom = SseParser.parseOne(msg_custom, {
-      parse: (data) => JSON.parse(data.split(': ')[1]),
+    const msg = `abcx: {"type": "processing", "status": "understanding", "chat_id": null}`;
+    const res = SseParser.parseOne(msg, {
+      parse: (line) => {
+        return JSON.parse(line.slice('abcx: '.length));
+      },
     });
-    expect(res_custom).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
+    expect(res).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
   });
 });

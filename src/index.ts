@@ -1,6 +1,6 @@
 export interface SseParserOptions {
   type?: 'standard' | 'json' | 'apply7';
-  parse?: (data: string) => any;
+  parse?: (line: string) => any;
 }
 
 const defaults: SseParserOptions = {
@@ -14,6 +14,7 @@ class SseParser {
     this.options = { ...defaults, ...inOptions };
   }
 
+  // static methods --- public api ---
   static parse(inMessage: string, inOptions?: SseParserOptions) {
     const parser = new SseParser(inOptions);
     return parser.parse(inMessage);
@@ -52,7 +53,8 @@ class SseParser {
     return this.parser(inMessage);
   }
 
-  parseStandard(inMessage: string) {
+  // private methods --- parser functions ---
+  private parseStandard(inMessage: string) {
     const message = inMessage.trim() || '';
     const lines = message.split('\n');
     return lines.reduce((acc, line) => {
@@ -62,13 +64,13 @@ class SseParser {
     }, {} as any);
   }
 
-  parseApply7(inMessage: string) {
+  private parseApply7(inMessage: string) {
     const message = inMessage.trim() || '';
     const dataValue = message.split(':').slice(1).join(':');
     return JSON.parse(dataValue);
   }
 
-  parseJson(inMessage: string) {
+  private parseJson(inMessage: string) {
     const message = inMessage.trim() || '';
     return JSON.parse(message);
   }
