@@ -19,11 +19,6 @@ SseParser.parse('event: message\ndata: hello\n\n');
 // [{ event:'message', data: 'hello' }]
 ```
 
-## types
-```ts
-/// <reference types="@jswork/sse-parser/global.d.ts" />
-```
-
 ## license
 Code released under [the MIT license](https://github.com/afeiship/sse-parser/blob/master/LICENSE.txt).
 
