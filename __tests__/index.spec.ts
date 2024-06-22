@@ -19,8 +19,8 @@ describe('api.basic', () => {
     });
   });
 
-  test('Type: apply7 style stream', () => {
-    const res2 = SseParser.parse(msg2, { type: 'apply7' });
+  test('Type: prefixedJson style stream', () => {
+    const res2 = SseParser.parse(msg2, { type: 'prefixedJson' });
     expect(Array.isArray(res2)).toBe(true);
     expect(res2[0]).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
   });
@@ -35,7 +35,7 @@ describe('api.basic', () => {
     const msg1 = `data:{"type": "processing", "status": "understanding", "chat_id": null}`;
     const msg2 = `{"type": "processing", "status": "understanding", "chat_id": null}`
     const msg3 = `id:n0sa4ikz_1\nevent:start\ndata:0%`
-    const res1 = SseParser.parseOne(msg1, { type: 'apply7' });
+    const res1 = SseParser.parseOne(msg1, { type: 'prefixedJson' });
     const res2 = SseParser.parseOne(msg2, { type: 'json' });
     const res3 = SseParser.parseOne(msg3, { type:'standard' });
     expect(res1).toEqual({ type: 'processing', status: 'understanding', chat_id: null });

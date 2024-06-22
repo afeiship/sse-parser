@@ -1,5 +1,5 @@
 export interface SseParserOptions {
-  type?: 'standard' | 'json' | 'apply7';
+  type?: 'standard' | 'json' | 'prefixedJson';
   parse?: (line: string) => any;
 }
 
@@ -34,8 +34,8 @@ class SseParser {
         return this.parseStandard;
       case 'json':
         return this.parseJson;
-      case 'apply7':
-        return this.parseApply7;
+      case 'prefixedJson':
+        return this.parsePrefixedJson;
       default:
         return this.parseStandard;
     }
@@ -69,7 +69,7 @@ class SseParser {
     return JSON.parse(message);
   }
 
-  private parseApply7(inMessage: string) {
+  private parsePrefixedJson(inMessage: string) {
     const message = inMessage.trim() || '';
     const dataValue = message.split(':').slice(1).join(':');
     return JSON.parse(dataValue);
