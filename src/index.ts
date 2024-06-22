@@ -64,15 +64,15 @@ class SseParser {
     }, {} as any);
   }
 
+  private parseJson(inMessage: string) {
+    const message = inMessage.trim() || '';
+    return JSON.parse(message);
+  }
+
   private parseApply7(inMessage: string) {
     const message = inMessage.trim() || '';
     const dataValue = message.split(':').slice(1).join(':');
     return JSON.parse(dataValue);
-  }
-
-  private parseJson(inMessage: string) {
-    const message = inMessage.trim() || '';
-    return JSON.parse(message);
   }
 }
 
