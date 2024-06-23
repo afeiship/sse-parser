@@ -44,10 +44,10 @@ describe('SseParser unit tests', () => {
   });
 
   test('custom parser', () => {
-    const msg = `abcx: {"type": "processing", "status": "understanding", "chat_id": null}`;
+    const msg = `abcx@ {"type": "processing", "status": "understanding", "chat_id": null}`;
     const res = SseParser.parseOne(msg, {
       parse: (line) => {
-        return JSON.parse(line.slice('abcx: '.length));
+        return JSON.parse(line.slice('abcx@ '.length));
       },
     });
     expect(res).toEqual({ type: 'processing', status: 'understanding', chat_id: null });
