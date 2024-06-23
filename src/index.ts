@@ -1,3 +1,5 @@
+import Parser from './parser';
+
 export interface SseParserOptions {
   type?: 'standard' | 'json' | 'prefixedJson';
   parse?: (line: string) => any;
@@ -28,17 +30,7 @@ class SseParser {
   get parser() {
     const { type, parse } = this.options;
     if (parse) return parse;
-
-    switch (type) {
-      case'standard':
-        return this.parseStandard;
-      case 'json':
-        return this.parseJson;
-      case 'prefixedJson':
-        return this.parsePrefixedJson;
-      default:
-        return this.parseStandard;
-    }
+    return Parser[type!];
   }
 
   parse(inMessage: string) {
@@ -51,28 +43,6 @@ class SseParser {
 
   parseOne(inMessage: string) {
     return this.parser(inMessage);
-  }
-
-  // private methods --- parser functions ---
-  private parseStandard(inMessage: string) {
-    const message = inMessage.trim() || '';
-    const lines = message.split('\n');
-    return lines.reduce((acc, line) => {
-      const [key, value] = line.split(':');
-      acc[key] = value;
-      return acc;
-    }, {} as any);
-  }
-
-  private parseJson(inMessage: string) {
-    const message = inMessage.trim() || '';
-    return JSON.parse(message);
-  }
-
-  private parsePrefixedJson(inMessage: string) {
-    const message = inMessage.trim() || '';
-    const dataValue = message.split(':').slice(1).join(':');
-    return JSON.parse(dataValue);
   }
 }
 
