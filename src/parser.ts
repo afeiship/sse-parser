@@ -17,7 +17,13 @@ export default class Parser {
 
   static prefixedJson(inMessage: string) {
     const message = inMessage.trim() || '';
-    const dataValue = message.split(':').slice(1).join(':');
-    return JSON.parse(dataValue);
+    const idx = message.indexOf(':');
+    if (idx === -1) return null;
+    const dataValue = message.slice(idx + 1);
+    try {
+      return JSON.parse(dataValue);
+    } catch (e) {
+      return null;
+    }
   }
 }
