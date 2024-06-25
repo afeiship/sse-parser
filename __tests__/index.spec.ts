@@ -72,4 +72,15 @@ describe('SseParser unit tests', () => {
     const res = SseParser.parse(msgA7, { type: 'prefixedJson' });
     fs.writeFileSync('__tests__/data/msg-apply7.json', JSON.stringify(res, null, 2));
   });
+
+  test('msg2 with callback', () => {
+    let count = 0;
+    const res = SseParser.parse(msg2, {
+      type: 'prefixedJson',
+      callback: (item) => {
+        count++;
+      },
+    });
+    expect(count).toBe(res.length);
+  });
 });
