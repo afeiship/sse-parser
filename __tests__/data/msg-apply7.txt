@@ -1,0 +1,144 @@
+data:{"type": "processing", "status": "understanding", "chat_id": null}
+
+data:{"type": "processing", "status": "processing", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"type": "chat_id", "refs": null, "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"type": "source", "doc": "", "metadata": {"node_type": "response", "activity_uuid": null, "topic": "metadata generate"}, "title": "", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"type": "processing", "status": "done"}
+
+data:{"answer": "\u4f60", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u73b0", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5728", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u53ef", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u4ee5", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5f00", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u59cb", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u51c6", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5907", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u7814", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u7a76", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u751f", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u7684", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u7533", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u8bf7", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u6750", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u6599", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u4e86", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\uff0c", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u7279", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u522b", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u662f", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u8ba1", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5212", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5728", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "2", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "0", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "2", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "5", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5e74", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u6bd5", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u4e1a", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u3002", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u8fd9", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5305", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u62ec", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u51c6", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u5907", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "G", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "R", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "E", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u6216", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "G", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "M", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "A", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "T", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u8003", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u8bd5", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u3001", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\u4e2a\u4eba\u9648\u8ff0\uff08Personal Statement\uff09\u3001\u63a8\u8350\u4fe1\uff08Recommendation Letters\uff09\u548c\u672c\u79d1\u6210\u7ee9\u5355\u7b49\u3002\u5c3d\u65e9\u51c6\u5907\u80fd\u591f\u8ba9\u4f60\u5728\u7533\u8bf7\u8fc7\u7a0b\u4e2d\u66f4\u52a0\u4ece\u5bb9\uff0c\u63d0\u9ad8\u7533\u8bf7\u6210\u529f\u7684\u51e0\u7387\u3002\n\n", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "Processed metadata: type=application, topic=required documents, target=graduate school, text=", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\n", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\n", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "<", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "d", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "i", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "v", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": " ", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "c", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "l", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "a", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "s", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "s", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "=", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "\"", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "h", "chat_id": "667a564d6e0b6ce992c94c66"}
+
+data:{"answer": "i", "chat_id": "667a564d6e0b6ce992c94c66"}
+

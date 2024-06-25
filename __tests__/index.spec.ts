@@ -11,6 +11,8 @@ const msg3 = fs.readFileSync('__tests__/data/msg3.txt', 'utf8');
 // msg special characters
 const msg4 = fs.readFileSync('__tests__/data/msg-special.txt', 'utf8');
 
+const msgA7 = fs.readFileSync('__tests__/data/msg-apply7.txt', 'utf8');
+
 describe('SseParser unit tests', () => {
   test('Type: standard event stream', () => {
     const res1 = SseParser.parse(msg1);
@@ -64,5 +66,10 @@ describe('SseParser unit tests', () => {
       event: 'finish',
       data: 'http://localhost:9081/api/static/ppts/zip/phYZ000.pptx',
     });
+  });
+
+  test('for apply7', () => {
+    const res = SseParser.parse(msgA7, { type: 'prefixedJson' });
+    fs.writeFileSync('__tests__/data/msg-apply7.json', JSON.stringify(res, null, 2));
   });
 });

@@ -1,0 +1,300 @@
+[
+  {
+    "type": "processing",
+    "status": "understanding",
+    "chat_id": null
+  },
+  {
+    "type": "processing",
+    "status": "processing",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "type": "chat_id",
+    "refs": null,
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "type": "source",
+    "doc": "",
+    "metadata": {
+      "node_type": "response",
+      "activity_uuid": null,
+      "topic": "metadata generate"
+    },
+    "title": "",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "type": "processing",
+    "status": "done"
+  },
+  {
+    "answer": "你",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "现",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "在",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "可",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "以",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "开",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "始",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "准",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "备",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "研",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "究",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "生",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "的",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "申",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "请",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "材",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "料",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "了",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "，",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "特",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "别",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "是",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "计",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "划",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "在",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "2",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "0",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "2",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "5",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "年",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "毕",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "业",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "。",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "这",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "包",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "括",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "准",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "备",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "G",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "R",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "E",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "或",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "G",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "M",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "A",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "T",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "考",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "试",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "、",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "个人陈述（Personal Statement）、推荐信（Recommendation Letters）和本科成绩单等。尽早准备能够让你在申请过程中更加从容，提高申请成功的几率。\n\n",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "Processed metadata: type=application, topic=required documents, target=graduate school, text=",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "\n",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "\n",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "<",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "d",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "i",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "v",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": " ",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "c",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "l",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "a",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "s",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "s",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "=",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "\"",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "h",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  },
+  {
+    "answer": "i",
+    "chat_id": "667a564d6e0b6ce992c94c66"
+  }
+]
