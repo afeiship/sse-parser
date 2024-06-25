@@ -11,8 +11,6 @@ export interface SseParserOptions {
 
 const defaults: SseParserOptions = {
   type: 'standard',
-  callback: (item: SseItem) => {
-  },
 };
 
 class SseParser {
