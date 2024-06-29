@@ -14,16 +14,13 @@ beforeEach(() => {
 
 describe('PrefixedJsonParser parse', () => {
   // data:{"type": "processing", "status": "understanding", "chat_id": null}
-
   // data:{"type": "processing", "status": "processing", "chat_id": "6676c0d27b009f1007f1040c"}
-
   // data:{"type": "chat_id", "re
-
   // fs": null, "chat_id": "6676c0d27b009f1007f1040c"}
-
   // data: {"type": "processing", "status": "done"}
 
   test('should parse prefixed json', () => {
+    let msgCount = 0;
     const streamChunks1 = [
       'data:{"type": "processing", "status": "understanding", "chat_id": null}',
       'data:{"type": "processing", "status": "processing", "chat_id": "6676c0d27b009f1007f1040c"}',
@@ -32,19 +29,25 @@ describe('PrefixedJsonParser parse', () => {
 
     const streamChunks2 = [
       'tus": null, "chat_id": "6676c0d27b009f1007f1040c"}',
-      'data: {"type": "processing", "status": "done"}',
-      '{"type": "processing", "status": "done"}',
+      'data: {"type": "processing"',
     ].join('\n\n');
 
-    const streamChunks = [streamChunks1, streamChunks2];
+    const streamChunks3 = [
+      ',"status": "done11"}',
+      'data: {"type": "processing", "status": "done"}',
+    ].join('\n\n');
+
+    const streamChunks = [streamChunks1, streamChunks2, streamChunks3];
 
     streamChunks.forEach((chunk) => {
       parser(chunk, {
         ...options,
         onMessage: ({ item }) => {
-          console.log('item: ', item);
+          msgCount++;
         },
-      })
+      });
     });
+
+    expect(msgCount).toBe(5);
   });
 });
