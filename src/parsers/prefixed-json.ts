@@ -1,11 +1,11 @@
-import type { ParserOptions } from '../index';
+import type { ParserOptions } from '..';
 
-export default class PrefixedJsonParser {
+export default class PrefixedJson {
   private static buffer = '';
 
   static parse(inStreamChunk: string, inOptions: ParserOptions) {
     const { prefix, onMessage } = inOptions;
-    const streamedChunk = PrefixedJsonParser.buffer ? (PrefixedJsonParser.buffer + inStreamChunk) : inStreamChunk;
+    const streamedChunk = PrefixedJson.buffer ? (PrefixedJson.buffer + inStreamChunk) : inStreamChunk;
     const messages = streamedChunk.split('\n\n');
     const prefixLength = prefix!.length;
     messages.forEach((message, index) => {
@@ -14,12 +14,12 @@ export default class PrefixedJsonParser {
         try {
           const data = JSON.parse(validMsg);
           onMessage?.({ item: data, index });
-          PrefixedJsonParser.buffer = '';
+          PrefixedJson.buffer = '';
         } catch (e) {
-          PrefixedJsonParser.buffer = message;
+          PrefixedJson.buffer = message;
         }
       } else {
-        PrefixedJsonParser.buffer += message;
+        PrefixedJson.buffer += message;
       }
     });
   }

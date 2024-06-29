@@ -29,9 +29,9 @@ class SseParser {
   }
 
   static parse(inMessage: string, inOptions?: SseParserOptions) {
-    this.instance ||= new this(inOptions);
-    this.instance.setOptions(inOptions);
-    return this.instance.parse(inMessage);
+    SseParser.instance ||= new SseParser(inOptions);
+    SseParser.instance.setOptions(inOptions);
+    return SseParser.instance.parse(inMessage);
   }
 
   parse(inMessage: string) {
