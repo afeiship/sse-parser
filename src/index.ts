@@ -19,14 +19,15 @@ const defaults: SseParserOptions = {
 
 class SseParser {
   private readonly options: SseParserOptions;
+  private static instance: any;
 
   constructor(inOptions?: SseParserOptions) {
     this.options = { ...defaults, ...inOptions };
   }
 
   static parse(inMessage: string, inOptions?: SseParserOptions) {
-    const parser = new SseParser(inOptions);
-    return parser.parse(inMessage);
+    SseParser.instance ||= new SseParser(inOptions);
+    return SseParser.instance.parse(inMessage);
   }
 
   parse(inMessage: string) {

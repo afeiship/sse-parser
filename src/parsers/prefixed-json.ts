@@ -5,7 +5,7 @@ export default class PrefixedJsonParser {
 
   static parse(inStreamChunk: string, inOptions: ParserOptions) {
     const { prefix, onMessage } = inOptions;
-    const streamedChunk = PrefixedJsonParser.buffer ? PrefixedJsonParser.buffer + inStreamChunk : inStreamChunk;
+    const streamedChunk = PrefixedJsonParser.buffer ? (PrefixedJsonParser.buffer + inStreamChunk) : inStreamChunk;
     const messages = streamedChunk.split('\n\n');
     const prefixLength = prefix!.length;
     messages.forEach((message, index) => {
@@ -14,6 +14,7 @@ export default class PrefixedJsonParser {
         try {
           const data = JSON.parse(validMsg);
           onMessage?.({ item: data, index });
+          PrefixedJsonParser.buffer = '';
         } catch (e) {
           PrefixedJsonParser.buffer = message;
         }

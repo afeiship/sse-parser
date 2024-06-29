@@ -1,33 +1,3 @@
-data:{"type": "processing", "status": "understanding", "chat_id": null}
+data:{"type": "suggested_responses", "suggested_responses": ["\u5982\u4f55\u5217\u51fa\u7ecf\u5386\u4ee5\u589e\u5f3a\u4e2a\u4eba\u9648\u8ff0\uff1f", "\u600e\u6837\u6539\u8fdb\u6211\u7684\u5f00\u5934\u6bb5\u843d\uff1f"], "chat_id": "66802feb9e518ef55d89f04a"}
 
-data:{"type": "processing", "status": "processing", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"type": "chat_id", "refs": null, "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"type": "source", "doc": "", "metadata": {"node_type": "response", "activity_uuid": null, "topic": "university application"}, "title": "", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"type": "processing", "status": "done"}
-
-data:{"answer": "\u8981", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u63d0\u5347", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u4f60\u7684", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u7533\u8bf7", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u6750\u6599", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\uff0c\u53ef\u4ee5", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u8003\u8651", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u4ee5\u4e0b", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u51e0\u4e2a", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"answer": "\u65b9\u9762", "chat_id": "6676c0d27b009f1007f1040c"}
-
-data:{"type": "suggested_responses", "suggested_responses": ["\u54ea\u6bb5\u7ecf\u5386\u8be5\u653e\u5728PS\u91cc\uff1f", "\u6709\u54ea\u4e9b\u5e38\u89c1\u7684\u7533\u8bf7\u5931\u8bef\uff1f"], "chat_id": "6676c0d27b009f1007f1040c"}
-
-data: {"type": "end", "chat_id": "6676c0d27b009f1007f1040c"}
+data: {"type": "end", "chat_id": "66802feb9e518ef55d89f04a"}

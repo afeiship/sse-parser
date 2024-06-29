@@ -1,3 +1,4 @@
+import fs from 'fs';
 import PrefixedJsonParser from '../src/parsers/prefixed-json';
 
 const parser = PrefixedJsonParser.parse;
@@ -8,8 +9,7 @@ const options = {
 
 // spy on console.warn
 beforeEach(() => {
-  jest.spyOn(console, 'warn').mockImplementation(() => {
-  });
+  jest.spyOn(console, 'warn').mockImplementation(() => {});
 });
 
 describe('PrefixedJsonParser parse', () => {
@@ -49,5 +49,19 @@ describe('PrefixedJsonParser parse', () => {
     });
 
     expect(msgCount).toBe(5);
+  });
+
+  test('file msg', () => {
+    const msg1 = fs.readFileSync('__tests__/data/msg2.txt');
+    let md = '';
+    parser(msg1.toString(), {
+      ...options,
+      onMessage: ({ item }) => {
+        console.log(item);
+        if (item.answer) {
+          md += item.answer;
+        }
+      },
+    });
   });
 });
