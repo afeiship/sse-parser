@@ -24,6 +24,11 @@ class SseParser {
     this.options = { ...defaults, ...inOptions };
   }
 
+  static parse(inMessage: string, inOptions?: SseParserOptions) {
+    const parser = new SseParser(inOptions);
+    return parser.parse(inMessage);
+  }
+
   parse(inMessage: string) {
     const { type, ...options } = this.options;
     const message = inMessage.trim() || '';
