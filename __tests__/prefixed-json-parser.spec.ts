@@ -9,7 +9,8 @@ const options = {
 
 // spy on console.warn
 beforeEach(() => {
-  jest.spyOn(console, 'warn').mockImplementation(() => {});
+  jest.spyOn(console, 'warn').mockImplementation(() => {
+  });
 });
 
 describe('PrefixedJsonParser parse', () => {
@@ -57,11 +58,25 @@ describe('PrefixedJsonParser parse', () => {
     parser(msg1.toString(), {
       ...options,
       onMessage: ({ item }) => {
-        console.log(item);
+        // console.log(item);
         if (item.answer) {
           md += item.answer;
         }
       },
     });
+  });
+
+  test('apply7 msgs example', () => {
+    const streamChunks = fs.readFileSync('__tests__/data/prefixed-json.txt').toString();
+    let msgCount = 0;
+    parser(streamChunks, {
+      ...options,
+      onMessage: ({ item }) => {
+        // console.log('item: ', item);
+        msgCount++;
+      },
+    });
+
+    expect(msgCount).toBe(7);
   });
 });
