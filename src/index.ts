@@ -1,9 +1,8 @@
-import PrefixedJson from './prefixed-json';
+import PrefixedJson from './parsers/prefixed-json';
 
 export interface ParserOptions {
   prefix?: string;
   onMessage?: (data: any) => void;
-  skipNil?: boolean;
 }
 
 export interface SseParserOptions extends ParserOptions {
@@ -13,8 +12,8 @@ export interface SseParserOptions extends ParserOptions {
 const defaults: SseParserOptions = {
   type: 'standard',
   prefix: 'data:',
-  skipNil: false,
-  onMessage: (data: any) => {}
+  onMessage: (data: any) => {
+  },
 };
 
 
@@ -36,7 +35,7 @@ class SseParser {
         PrefixedJson.parse(message, options);
         break;
       default:
-        // this.parseStandard(message);
+      // this.parseStandard(message);
     }
   }
 }
