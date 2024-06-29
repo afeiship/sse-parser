@@ -12,21 +12,25 @@ export interface SseParserOptions extends ParserOptions {
 const defaults: SseParserOptions = {
   type: 'standard',
   prefix: 'data:',
-  onMessage: (data: any) => {},
+  onMessage: (data: any) => {
+  },
 };
 
 class SseParser {
-  private readonly options: SseParserOptions;
+  private options: SseParserOptions;
   private static instance: any;
 
   constructor(inOptions?: SseParserOptions) {
     this.options = { ...defaults, ...inOptions };
   }
 
+  setOptions(inOptions: SseParserOptions) {
+    this.options = { ...this.options, ...inOptions };
+  }
+
   static parse(inMessage: string, inOptions?: SseParserOptions) {
-    if (!SseParser.instance) {
-      SseParser.instance = new SseParser(inOptions);
-    }
+    SseParser.instance ||= new SseParser(inOptions);
+    SseParser.instance.setOptions(inOptions);
     return SseParser.instance.parse(inMessage);
   }
 
