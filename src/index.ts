@@ -26,8 +26,8 @@ class SseParser {
   }
 
   static parse(inMessage: string, inOptions?: SseParserOptions) {
-    SseParser.instance ||= new SseParser(inOptions);
-    return SseParser.instance.parse(inMessage);
+    const parser = new SseParser(inOptions);
+    return parser.parse(inMessage);
   }
 
   parse(inMessage: string) {
