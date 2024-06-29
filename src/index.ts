@@ -1,17 +1,22 @@
-import Parser from './parser';
+import PrefixedJson from './prefixed-json';
 
-export type SseItem = { item: any; index: number };
-export type SseCallback = (item: SseItem) => void;
+export interface ParserOptions {
+  prefix?: string;
+  onMessage?: (data: any) => void;
+  skipNil?: boolean;
+}
 
-export interface SseParserOptions {
+export interface SseParserOptions extends ParserOptions {
   type?: 'standard' | 'json' | 'prefixedJson';
-  parse?: (line: string) => any;
-  callback?: SseCallback;
 }
 
 const defaults: SseParserOptions = {
-  type: 'standard'
+  type: 'standard',
+  prefix: 'data:',
+  skipNil: false,
+  onMessage: (data: any) => {}
 };
+
 
 class SseParser {
   private readonly options: SseParserOptions;
@@ -20,39 +25,19 @@ class SseParser {
     this.options = { ...defaults, ...inOptions };
   }
 
-  // static methods --- public api ---
-  static parse(inMessage: string, inOptions?: SseParserOptions) {
-    const { callback, ...options } = inOptions || {};
-    const parser = new SseParser(options);
-    return parser.parse(inMessage, callback);
-  }
-
-  static parseOne(inMessage: string, inOptions?: SseParserOptions) {
-    const { callback, ...options } = inOptions || {};
-    const parser = new SseParser(options);
-    return parser.parseOne(inMessage, callback);
-  }
-
-  get parser() {
-    const { type, parse } = this.options;
-    if (parse) return parse;
-    return Parser[type!];
-  }
-
-  parse(inMessage: string, inCallback?: SseCallback) {
+  parse(inMessage: string) {
+    const { type, ...options } = this.options;
     const message = inMessage.trim() || '';
-    const messages = message.split('\n\n');
-    return messages.map((message, index) => {
-      const item = this.parser(message);
-      inCallback?.({ item, index });
-      return item;
-    });
-  }
-
-  parseOne(inMessage: string, inCallback?: SseCallback) {
-    const item = this.parser(inMessage);
-    inCallback?.({ item, index: 0 });
-    return item;
+    switch (type) {
+      case 'json':
+        // Parser.parse(message, options);
+        break;
+      case 'prefixedJson':
+        PrefixedJson.parse(message, options);
+        break;
+      default:
+        // this.parseStandard(message);
+    }
   }
 }
 
