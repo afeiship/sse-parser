@@ -1,4 +1,10 @@
+import fs from 'fs';
 import parser from '../src/parser';
+
+// spy on console.warn
+beforeEach(() => {
+  jest.spyOn(console, 'warn').mockImplementation(() => {});
+});
 
 describe('SseParser parser tests', () => {
   test('Type: standard parser', () => {
@@ -27,4 +33,12 @@ describe('SseParser parser tests', () => {
     expect(res2).toEqual({ type: 'message', answer: 'Processed metadata: 1234567890' });
     expect(res3_err).toBe(null);
   });
+
+  test('Type single-line case: ', ()=>{
+    const data = fs.readFileSync('__tests__/data/single-line-has-err.txt');
+    const res = parser.prefixedJson(data.toString());
+    expect(res).toBe(null);
+    // test has warnings
+    // expect(console.warn).toBeCalled();
+  })
 });

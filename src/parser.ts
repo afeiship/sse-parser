@@ -23,6 +23,7 @@ export default class Parser {
     try {
       return JSON.parse(dataValue);
     } catch (e) {
+      console.warn('⛔️ parsing JSON:', e);
       return null;
     }
   }

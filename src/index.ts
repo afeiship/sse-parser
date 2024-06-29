@@ -10,7 +10,7 @@ export interface SseParserOptions {
 }
 
 const defaults: SseParserOptions = {
-  type: 'standard',
+  type: 'standard'
 };
 
 class SseParser {
