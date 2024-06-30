@@ -27,7 +27,7 @@ export default class PrefixedJson {
            * Otherwise, it will lead to such a situation: data:{"type": "ssd", "sta\ntus": "ok"} and cause JSON.parse to fail to parse
            */
           PrefixedJson.buffer = message.trim();
-          debug && console.error('⛔️ PrefixedJson parse error:', e, message);
+          debug && console.warn('⛔️ PrefixedJson parse error:', e, message);
         }
       } else {
         PrefixedJson.buffer += message.trim();

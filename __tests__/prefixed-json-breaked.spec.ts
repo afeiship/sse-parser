@@ -5,10 +5,15 @@ import SseParser from '../src';
 const parser = PrefixedJsonParser.parse;
 
 const options = {
+  debug: true,
   prefix: 'data:',
 };
 
 // bun test __tests__/prefixed-json-full.spec.ts
+// spy console.warn to noop
+beforeEach(() => {
+  jest.spyOn(console, 'warn').mockImplementation(() => {});
+});
 
 describe('PrefixedJsonParser', () => {
   let s1: string, s2: string, s3: string;
