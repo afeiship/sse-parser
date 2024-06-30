@@ -1,0 +1,9 @@
+data:{"type": "processing", "status": "understanding", "chat_id": null}
+
+data:{"type": "processing", "status": "processing", "chat_id": "668004375bbc0ffe2f72e200"}
+
+data:{"type": "chat_id", "refs": null, "chat_id": "668004375bbc0ffe2f72e200"}
+
+data:{ "type": "chat_id", "refs": null, "chat_id": "668004375bbc0ffe2f72e200" }
+
+data:{ "answer": "Process data: 16.88%", "chat_id": "668004375bbc0ffe2f72e200" }
