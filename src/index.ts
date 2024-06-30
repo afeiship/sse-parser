@@ -1,8 +1,10 @@
 import PrefixedJson from './parsers/prefixed-json';
 
 export type ParserType = 'standard' | 'json' | 'prefixedJson';
+
 export interface ParserOptions {
   prefix?: string;
+  debug?: boolean;
   onMessage?: (data: any) => void;
 }
 
@@ -13,6 +15,7 @@ export interface SseParserOptions extends ParserOptions {
 const defaults: SseParserOptions = {
   type: 'standard',
   prefix: 'data:',
+  debug: false,
   onMessage: (data: any) => {
   },
 };

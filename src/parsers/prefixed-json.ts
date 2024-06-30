@@ -4,7 +4,7 @@ export default class PrefixedJson {
   private static buffer = '';
 
   static parse(inStreamChunk: string, inOptions: ParserOptions) {
-    const { prefix, onMessage } = inOptions;
+    const { prefix, debug, onMessage } = inOptions;
     const streamedChunk = PrefixedJson.buffer ? (PrefixedJson.buffer + inStreamChunk) : inStreamChunk;
     const messages = streamedChunk.split('\n\n').filter(item => item.trim());
     const prefixLength = prefix!.length;
@@ -27,6 +27,7 @@ export default class PrefixedJson {
            * Otherwise, it will lead to such a situation: data:{"type": "ssd", "sta\ntus": "ok"} and cause JSON.parse to fail to parse
            */
           PrefixedJson.buffer = message.trim();
+          debug && console.error('⛔️ PrefixedJson parse error:', e, message);
         }
       } else {
         PrefixedJson.buffer += message.trim();
