@@ -1,0 +1,5 @@
+data:{"type": "processing", "status": "done"}
+
+data:{"answer": "\u8981", "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}
+
+data:{"answer": "\u6539\u5584", "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}

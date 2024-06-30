@@ -1,0 +1,6 @@
+data:{"type": "processing", "status": "understanding", "chat_id": null}
+
+data:{"type": "processing", "status": "processing", "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}
+
+data:{"type": "chat_id", "refs": null, "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}
+

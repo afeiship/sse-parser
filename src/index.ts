@@ -1,5 +1,6 @@
 import PrefixedJson from './parsers/prefixed-json';
 
+export type ParserType = 'standard' | 'json' | 'prefixedJson';
 export interface ParserOptions {
   prefix?: string;
   onMessage?: (data: any) => void;

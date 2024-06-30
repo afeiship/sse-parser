@@ -1,0 +1,7 @@
+data:{"type": "suggested_responses", "suggested_responses": ["\u4f60\u80fd\u7ed9\u6211\u4e00\u4e9b\u5177\u4f53\u7684\u5199\u4f5c\u4f8b\u5b50\u5417\uff1f", "\u6211\u5e94\u8be5\u907f\u514d\u4ec0\u4e48\u8bdd\u9898\uff1f"], "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}
+
+data: {"type": "end", "chat_id": "667ffc5a5bbc0ffe2f72e1cb"}
+
+
+
+

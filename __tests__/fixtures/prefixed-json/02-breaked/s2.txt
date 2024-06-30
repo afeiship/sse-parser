@@ -1,0 +1,3 @@
+tus": null, "chat_id": "6676c0d27b009f1007f1040c"}
+
+data: {"type": "processing"
